@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class BoatsandjobTest < ActiveSupport::TestCase
+class BoatJobTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

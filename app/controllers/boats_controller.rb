@@ -1,22 +1,51 @@
 class BoatsController < ApplicationController
-  def index
+def index
+    @boats = Boat.all
   end
 
-  def create
+def create
+    @boat = Boat.create(
+      fname: params[:profile][:fname],
+      lname: params[:profile][:lname],
+      description: params[:profile][:description]
+    )
+
+    @job = Job.create(
+      fname: params[:profile][:fname],
+      lname: params[:profile][:lname],
+      description: params[:profile][:description]
+    )
+
+    redirect_to boat_path
   end
 
-  def show
-  end
+# def listing
+#   @boats = Boat.all
+#   @jobs = Job.all
+# end
 
-  def new
-  end
+def new
+  @boat = Boat.new
+  @job = Job.new
+end
 
-  def edit
-  end
+# def add_job
+#     @job = Job.create(
+#       fname: params[:profile][:fname],
+#       lname: params[:profile][:lname],
+#       description: params[:profile][:description]
+#     )
+#
+#     if @job.save
+#    redirect_to boats_listing_path
+#   end
+end
 
-  def update
-  end
+def edit
+end
 
-  def destroy
-  end
+def update
+end
+
+def destroy
 end

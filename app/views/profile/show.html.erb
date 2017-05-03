@@ -1,2 +1,9 @@
 <h1>Profile#show</h1>
-<p>Find me in app/views/profile/show.html.erb</p>
+<!-- Shows User Info -->
+<div class="Profile">
+  <h2>Profile</h2>
+<ul class="blog-posts">
+<li id="author"> Name: <a href=""><%= @profile.fname %></a> </li>
+<li id="title"> Last Name: <%= @profile.lname %> </li>
+<li id="content"> Description: <%= @profile.lname %> </li>
+</ul>

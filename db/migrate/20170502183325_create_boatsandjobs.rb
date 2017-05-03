@@ -1,8 +1,8 @@
 class CreateBoatsandjobs < ActiveRecord::Migration[5.0]
   def change
     create_table :boatsandjobs do |t|
-      t.integer :jobs_id
-      t.integer :boats_id
+      t.integer :job_id
+      t.integer :boat_id
 
       t.timestamps
     end

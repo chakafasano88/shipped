@@ -1,2 +1,43 @@
 <h1>Boats#new</h1>
 <p>Find me in app/views/boats/new.html.erb</p>
+
+<%= form_for @boat do |f| %>
+  <%= f.label :name %>:
+  <br>
+  <%= f.text_field :name %>
+  <br>
+  <%= f.label :number_of_containers %>:
+  <br>
+  <%= f.text_field :number_of_containers %>
+  <br>
+  <%= f.label :location %>:
+  <br>
+  <%= f.text_field :location %>
+  <br>
+  <%= f.submit %>
+<% end %>
+
+<%= form_for @job do |f| %>
+  <%= f.label :description %>:
+  <br>
+  <%= f.text_field :description %>
+  <br>
+  <%= f.label :number_of_containers %>:
+  <br>
+  <%= f.text_field :number_of_containers %>
+  <br>
+  <%= f.label :origin %>:
+  <br>
+  <%= f.text_field :origin %><br />
+
+  <%= f.label :destination %>:
+  <br>
+  <%= f.text_field :destination %>
+  <br>
+  <%= f.label :cost %>:
+  <br>
+  <%= f.text_field :cost %>
+  <br>
+  <%= f.submit %>
+
+<% end %>

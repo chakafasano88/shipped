@@ -1,2 +1,16 @@
-<h1>Profile#new</h1>
-<p>Find me in app/views/profile/new.html.erb</p>
+<h1>Profile</h1>
+<!-- This returns a form to create a new profile  -->
+<div class="container">
+  <div class="new_profile_form">
+<% form_for @profile, url: profile_path(@profile), html: { method: :put } do |form| %>
+  <%= form.label :fname %>
+  <%= form.text_field :fname %>
+  <%= form.label :lname %>
+  <%= form.text_field :lname  %>
+  <%= form.label :description %>
+  <%= form.text_field :description %>
+
+  <%= form.submit %>
+<% end %>
+  </div>
+</div>
